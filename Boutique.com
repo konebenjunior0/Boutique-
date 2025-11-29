@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -105,7 +104,13 @@
             <p>Prix : 5000frc</p>
             <button onclick="addToCart('Produit C', 5000frc)">Ajouter au panier</button>
         </div>
+ };
 
+        item.appendChild(removeBtn);
+        list.appendChild(item);
+
+        total += price;
+        document.getElementById("total").textContent = total;
     </div>
 
     <div id="cart">
@@ -134,13 +139,7 @@
             list.removeChild(item);
             total -= price;
             document.getElementById("total").textContent = total;
-        };
 
-        item.appendChild(removeBtn);
-        list.appendChild(item);
-
-        total += price;
-        document.getElementById("total").textContent = total;
     }
 </script>
 
